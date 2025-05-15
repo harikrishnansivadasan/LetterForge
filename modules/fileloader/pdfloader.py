@@ -20,8 +20,7 @@ def load_pdf(uploaded_file):
         for page_num in range(len(pdf_document)):
             page = pdf_document[page_num]
             text = page.get_text()
-            text_pages+= text
-
+            text_pages += text
 
         # Close the PDF document
         pdf_document.close()

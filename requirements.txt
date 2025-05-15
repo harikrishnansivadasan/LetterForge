@@ -4,3 +4,4 @@ numpy
 PyResparser
 nltk
 spacy
+PyMuPDF

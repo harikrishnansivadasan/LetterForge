@@ -1,4 +1,7 @@
 import pymupdf
+import logging
+import docx
+
 
 
 def load_pdf(uploaded_file):
@@ -13,7 +16,9 @@ def load_pdf(uploaded_file):
     """
     try:
         # Open the PDF file
-        pdf_document = pymupdf.open(stream=uploaded_file.read(), filetype="pdf")
+        pdf_document = pymupdf.open(
+            stream=uploaded_file.read(), filetype=["pdf", "docx"]
+        )
 
         # Extract text from each page
         text_pages = ""
@@ -26,5 +31,5 @@ def load_pdf(uploaded_file):
         pdf_document.close()
         return text_pages
     except Exception as e:
-        print(f"Error loading PDF: {e}")
+        logging.error(f"Error loading PDF: {e}")
         return ""

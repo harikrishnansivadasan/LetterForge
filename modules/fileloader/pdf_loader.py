@@ -1,7 +1,6 @@
 import pymupdf
 import logging
-import docx
-
+import docx2txt
 
 
 def load_pdf(uploaded_file):
@@ -16,9 +15,7 @@ def load_pdf(uploaded_file):
     """
     try:
         # Open the PDF file
-        pdf_document = pymupdf.open(
-            stream=uploaded_file.read(), filetype=["pdf", "docx"]
-        )
+        pdf_document = pymupdf.open(stream=uploaded_file.read(), filetype="pdf")
 
         # Extract text from each page
         text_pages = ""

@@ -5,3 +5,5 @@ PyResparser
 nltk
 spacy
 PyMuPDF
+langchain
+langchain-huggingface

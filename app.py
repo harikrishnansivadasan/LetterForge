@@ -1,7 +1,8 @@
 import streamlit as st
 from modules.fileloader import pdf_loader
 from modules.fileloader import text_loader
-from modules.ner.ner_capture import parse_resume
+from modules.ner.ner_capture import parse_resume, parse_jd
+import logging
 
 st.title("LetterForge")
 st.subheader("Create a Perfect cover letter for your job application")
@@ -20,8 +21,12 @@ if Generate:
             resume_content = pdf_loader.load_pdf(resume)
             jd_content = text_loader.load_text(job_description)
             st.success("Resume loaded successfully!")
-            ## calling the ner_capture function- Api call
-            # st.write(parse_resume(resume_content))
-            st.write(resume_content)
+            # calling the ner_capture function- Api call
+            try:
+                st.write(parse_resume(resume_content))
+            except Exception as e:
+                logging.error(f"Error loading PDF: {e}")
+                st.error(e)
+            # st.write(resume_content)
     else:
         st.error("Please upload a resume file.")

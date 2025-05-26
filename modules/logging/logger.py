@@ -14,7 +14,7 @@ os.makedirs(os.path.dirname(logs_path), exist_ok=True)
 LOG_FLE_PATH = os.path.join(logs_path, LOG_FLE)
 logging.basicConfig(
     filename=LOG_FLE_PATH,
-    level=logging.INFO,
+    level=logging.DEBUG,
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
 )
 

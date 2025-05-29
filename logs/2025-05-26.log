@@ -1,0 +1,2 @@
+2025-05-26 23:33:43,959 - LetterForge - ERROR - An error occurred: division by zero
+2025-05-26 23:38:12,016 - LetterForge - ERROR - Error loading PDF: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}

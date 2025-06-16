@@ -1,0 +1,19 @@
+2025-06-16 09:57:34,914 - LetterForge - ERROR - Error loading PDF: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+2025-06-16 10:00:48,749 - LetterForge - ERROR - Error loading PDF: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+2025-06-16 10:10:03,449 - LetterForge - ERROR - Error loading PDF: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+2025-06-16 10:10:26,454 - LetterForge - ERROR - Error loading PDF: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+2025-06-16 14:11:37,557 - LetterForge - INFO - Files loaded successfully!
+2025-06-16 14:11:43,488 - LetterForge - INFO - Entities extracted successfully!
+2025-06-16 14:11:45,726 - LetterForge - INFO - Cover letter generated successfully!
+2025-06-16 14:15:04,546 - LetterForge - INFO - Files loaded successfully!
+2025-06-16 14:15:10,260 - LetterForge - INFO - Entities extracted successfully!
+2025-06-16 14:15:12,275 - LetterForge - ERROR - Error generating cover letter: TextWidgetsMixin.text_area() got an unexpected keyword argument 'width'
+2025-06-16 14:15:33,842 - LetterForge - INFO - Files loaded successfully!
+2025-06-16 14:15:39,541 - LetterForge - INFO - Entities extracted successfully!
+2025-06-16 14:15:41,905 - LetterForge - ERROR - Error generating cover letter: TextWidgetsMixin.text_area() got multiple values for argument 'label'
+2025-06-16 14:16:37,844 - LetterForge - INFO - Files loaded successfully!
+2025-06-16 14:16:43,742 - LetterForge - INFO - Entities extracted successfully!
+2025-06-16 14:16:45,734 - LetterForge - INFO - Cover letter generated successfully!
+2025-06-16 14:19:30,660 - LetterForge - INFO - Files loaded successfully!
+2025-06-16 14:19:36,562 - LetterForge - INFO - Entities extracted successfully!
+2025-06-16 14:19:38,524 - LetterForge - INFO - Cover letter generated successfully!

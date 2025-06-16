@@ -7,6 +7,7 @@ from langchain_core.prompts import ChatPromptTemplate
 load_dotenv()
 
 """Initialize the LLM"""
+# https://groq.com/
 llm = ChatGroq(model="llama-3.3-70b-versatile", max_tokens=2000, temperature=0.2)
 
 # Define resume prompt template
@@ -79,6 +80,7 @@ strictly return in json dictionary format
 resume_prompt = ChatPromptTemplate.from_template(resume_prompt_template)
 jd_prompt = ChatPromptTemplate.from_template(jd_prompt_template)
 
+
 # Function to parse resume and return structured JSON data
 def parse_resume(text: str) -> dict:
     """
@@ -99,14 +101,15 @@ def parse_resume(text: str) -> dict:
 
     return parsed_json
 
+
 # Function to parse jd and return structured JSON data
 def parse_jd(text: str) -> dict:
     """
     Parse a job description and return structured JSON data.
-    
+
     Args:
         text (str): The job description text to parse.
-    
+
     Returns:
         dict: A dictionary containing the parsed information.
     """

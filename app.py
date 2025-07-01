@@ -8,6 +8,7 @@ from modules.coverletter.gen_coverletter import generate_cover_letter
 from dotenv import load_dotenv
 from langchain_groq import ChatGroq
 from langchain_core.messages import AIMessage, HumanMessage
+from modules.jobfetch.agent import run_job_agent_from_description
 
 # Load environment variables
 load_dotenv()
@@ -20,7 +21,7 @@ resume = st.sidebar.file_uploader(
 )
 job_description = st.text_area("Paste your job description here", height=300)
 Generate = st.button("Generate Cover Letter")
-
+Find = st.button("🔍 Find Jobs ")
 
 # Initialize the LLM
 # https://groq.com/
@@ -81,7 +82,13 @@ if Generate:
                     st.session_state.cover_letter = (
                         cover_letter  # Store generated cover letter
                     )
-                    # Display the generated cover letter in a text area
+
+                except Exception as gen_error:
+                    logger.error(f"Error generating cover letter: {gen_error}")
+                    staus_box.error(f"Error generating cover letter: {gen_error}")
+
+                # Display the generated cover letter in a text area
+                if "cover_letter" in st.session_state:
                     st.text_area(
                         "Generated Cover Letter",
                         value=cover_letter,
@@ -89,20 +96,15 @@ if Generate:
                         key="cover_letter_output",
                     )
                     # Download button for the cover letter
-                    if st.session_state.cover_letter:
-                        download_clicked = st.download_button(
-                            label="Download Cover Letter",
-                            data=st.session_state.cover_letter,
-                            file_name="cover_letter.txt",
-                            mime="text/plain",
-                            key="download_cover_letter",
-                        )
-                        if download_clicked:
-                            logger.info("Cover letter download started.")
-
-                except Exception as gen_error:
-                    logger.error(f"Error generating cover letter: {gen_error}")
-                    staus_box.error(f"Error generating cover letter: {gen_error}")
+                    download_clicked = st.download_button(
+                        label="Download Cover Letter",
+                        data=st.session_state.cover_letter,
+                        file_name="cover_letter.txt",
+                        mime="text/plain",
+                        key="download_cover_letter",
+                    )
+                    if download_clicked:
+                        logger.info("Cover letter download started.")
 
             except Exception as e:
                 logger.error(f"Error loading PDF: {e}")
@@ -110,6 +112,22 @@ if Generate:
 
     else:
         staus_box.error("Please upload Resume and Jd.")
+
+# Job Search Functionality
+if Find:
+    logger.info("-------------------Find Jobs button clicked--------------------")
+    if job_description:
+        with st.spinner("Searching..."):
+            result = run_job_agent_from_description(job_description)
+            st.session_state.similar_jobs = result
+            staus_box.success("Done.")
+    else:
+        staus_box.warning("Please paste a job description.")
+
+# Display similar jobs if available
+if "similar_jobs" in st.session_state:
+    st.markdown("### 🧠 Jobs Found by AI")
+    st.markdown(st.session_state.similar_jobs)
 
 
 # Chat Interface

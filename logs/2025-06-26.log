@@ -1,0 +1,536 @@
+2025-06-26 00:39:04,511 - LetterForge - INFO - -------------------Generate button clicked--------------------
+2025-06-26 00:39:04,569 - LetterForge - INFO - Files loaded successfully!
+2025-06-26 00:39:09,166 - LetterForge - INFO - Entities extracted successfully!
+2025-06-26 00:39:11,011 - LetterForge - INFO - Cover letter generated successfully!
+2025-06-26 00:44:51,990 - LetterForge - INFO - -------------------Generate button clicked--------------------
+2025-06-26 00:44:51,995 - LetterForge - INFO - Files loaded successfully!
+2025-06-26 00:44:56,714 - LetterForge - INFO - Entities extracted successfully!
+2025-06-26 00:44:58,577 - LetterForge - INFO - Cover letter generated successfully!
+2025-06-26 04:48:13,352 - LetterForge - INFO - -------------------Generate button clicked--------------------
+2025-06-26 04:48:13,417 - LetterForge - INFO - Files loaded successfully!
+2025-06-26 04:48:18,037 - LetterForge - INFO - Entities extracted successfully!
+2025-06-26 04:48:19,897 - LetterForge - INFO - Cover letter generated successfully!
+2025-06-26 04:54:33,469 - LetterForge - INFO - -------------------Find Jobs button clicked--------------------
+2025-06-26 04:54:33,788 - LetterForge - ERROR - Agent execution failed.
+Traceback (most recent call last):
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\modules\jobfetch\agent.py", line 62, in run_job_agent_from_description
+    return agent.run(prompt)
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain_core\_api\deprecation.py", line 191, in warning_emitting_wrapper
+    return wrapped(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\chains\base.py", line 603, in run
+    return self(args[0], callbacks=callbacks, tags=tags, metadata=metadata)[
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain_core\_api\deprecation.py", line 191, in warning_emitting_wrapper
+    return wrapped(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\chains\base.py", line 386, in __call__
+    return self.invoke(
+           ^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\chains\base.py", line 167, in invoke
+    raise e
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\chains\base.py", line 157, in invoke
+    self._call(inputs, run_manager=run_manager)
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\agents\agent.py", line 1620, in _call
+    next_step_output = self._take_next_step(
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\agents\agent.py", line 1326, in _take_next_step
+    [
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\agents\agent.py", line 1354, in _iter_next_step
+    output = self._action_agent.plan(
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\agents\openai_functions_agent\base.py", line 124, in plan
+    predicted_message = self.llm.predict_messages(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain_core\_api\deprecation.py", line 191, in warning_emitting_wrapper
+    return wrapped(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1276, in predict_messages
+    return self(messages, stop=_stop, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain_core\_api\deprecation.py", line 191, in warning_emitting_wrapper
+    return wrapped(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1200, in __call__
+    generation = self.generate(
+                 ^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 775, in generate
+    self._generate_with_cache(
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1021, in _generate_with_cache
+    result = self._generate(
+             ^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain_groq\chat_models.py", line 498, in _generate
+    response = self.client.create(messages=message_dicts, **params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\groq\resources\chat\completions.py", line 361, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\groq\_base_client.py", line 1222, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\groq\_base_client.py", line 1031, in request
+    raise self._make_status_error_from_response(err.response) from None
+groq.NotFoundError: Error code: 404 - {'error': {'message': 'The model `llama-3-3b-8192` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+2025-06-26 04:59:07,748 - LetterForge - INFO - -------------------Find Jobs button clicked--------------------
+2025-06-26 04:59:08,022 - LetterForge - ERROR - Agent execution failed.
+Traceback (most recent call last):
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\modules\jobfetch\agent.py", line 62, in run_job_agent_from_description
+    return agent.run(prompt)
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain_core\_api\deprecation.py", line 191, in warning_emitting_wrapper
+    return wrapped(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\chains\base.py", line 603, in run
+    return self(args[0], callbacks=callbacks, tags=tags, metadata=metadata)[
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain_core\_api\deprecation.py", line 191, in warning_emitting_wrapper
+    return wrapped(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\chains\base.py", line 386, in __call__
+    return self.invoke(
+           ^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\chains\base.py", line 167, in invoke
+    raise e
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\chains\base.py", line 157, in invoke
+    self._call(inputs, run_manager=run_manager)
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\agents\agent.py", line 1620, in _call
+    next_step_output = self._take_next_step(
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\agents\agent.py", line 1326, in _take_next_step
+    [
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\agents\agent.py", line 1354, in _iter_next_step
+    output = self._action_agent.plan(
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\agents\openai_functions_agent\base.py", line 124, in plan
+    predicted_message = self.llm.predict_messages(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain_core\_api\deprecation.py", line 191, in warning_emitting_wrapper
+    return wrapped(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1276, in predict_messages
+    return self(messages, stop=_stop, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain_core\_api\deprecation.py", line 191, in warning_emitting_wrapper
+    return wrapped(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1200, in __call__
+    generation = self.generate(
+                 ^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 775, in generate
+    self._generate_with_cache(
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1021, in _generate_with_cache
+    result = self._generate(
+             ^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain_groq\chat_models.py", line 498, in _generate
+    response = self.client.create(messages=message_dicts, **params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\groq\resources\chat\completions.py", line 361, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\groq\_base_client.py", line 1222, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\groq\_base_client.py", line 1031, in request
+    raise self._make_status_error_from_response(err.response) from None
+groq.NotFoundError: Error code: 404 - {'error': {'message': 'The model `lama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+2025-06-26 05:00:28,279 - LetterForge - INFO - -------------------Find Jobs button clicked--------------------
+2025-06-26 05:06:20,915 - LetterForge - INFO - -------------------Find Jobs button clicked--------------------
+2025-06-26 05:37:01,407 - LetterForge - INFO - -------------------Find Jobs button clicked--------------------
+2025-06-26 05:39:26,874 - LetterForge - INFO - -------------------Find Jobs button clicked--------------------
+2025-06-26 05:47:03,671 - LetterForge - INFO - -------------------Find Jobs button clicked--------------------
+2025-06-26 05:48:30,169 - LetterForge - INFO - -------------------Find Jobs button clicked--------------------
+2025-06-26 05:55:38,688 - LetterForge - INFO - -------------------Generate button clicked--------------------
+2025-06-26 05:55:38,737 - LetterForge - INFO - Files loaded successfully!
+2025-06-26 05:55:43,375 - LetterForge - INFO - Entities extracted successfully!
+2025-06-26 05:55:45,333 - LetterForge - INFO - Cover letter generated successfully!
+2025-06-26 05:55:47,861 - LetterForge - INFO - -------------------Find Jobs button clicked--------------------
+2025-06-26 06:01:18,554 - LetterForge - INFO - -------------------Find Jobs button clicked--------------------
+2025-06-26 06:05:49,975 - LetterForge - INFO - -------------------Find Jobs button clicked--------------------
+2025-06-26 07:42:33,436 - LetterForge - INFO - -------------------Find Jobs button clicked--------------------
+2025-06-26 07:44:11,361 - LetterForge - INFO - -------------------Generate button clicked--------------------
+2025-06-26 07:44:14,199 - LetterForge - INFO - -------------------Find Jobs button clicked--------------------
+2025-06-26 07:44:35,825 - LetterForge - INFO - -------------------Generate button clicked--------------------
+2025-06-26 07:44:35,863 - LetterForge - INFO - Files loaded successfully!
+2025-06-26 07:44:40,484 - LetterForge - INFO - Entities extracted successfully!
+2025-06-26 07:44:42,330 - LetterForge - INFO - Cover letter generated successfully!
+2025-06-26 07:44:45,378 - LetterForge - INFO - -------------------Find Jobs button clicked--------------------
+2025-06-26 07:56:25,266 - LetterForge - INFO - -------------------Find Jobs button clicked--------------------
+2025-06-26 08:33:11,127 - LetterForge - INFO - -------------------Find Jobs button clicked--------------------
+2025-06-26 09:01:51,451 - LetterForge - INFO - -------------------Generate button clicked--------------------
+2025-06-26 09:01:51,502 - LetterForge - INFO - Files loaded successfully!
+2025-06-26 09:01:56,316 - LetterForge - INFO - Entities extracted successfully!
+2025-06-26 09:01:58,172 - LetterForge - INFO - Cover letter generated successfully!
+2025-06-26 09:02:01,302 - LetterForge - INFO - -------------------Find Jobs button clicked--------------------
+2025-06-26 09:02:06,975 - LetterForge - INFO - -------------------Find Jobs button clicked--------------------
+2025-06-26 09:18:06,136 - LetterForge - INFO - -------------------Find Jobs button clicked--------------------
+2025-06-26 09:18:06,144 - LetterForge - ERROR - Agent execution failed.
+Traceback (most recent call last):
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\modules\jobfetch\agent.py", line 56, in run_job_agent_from_description
+    agent = initialize_agent(
+            ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain_core\_api\deprecation.py", line 191, in warning_emitting_wrapper
+    return wrapped(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\agents\initialize.py", line 74, in initialize_agent
+    agent_obj = agent_cls.from_llm_and_tools(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\agents\openai_functions_agent\base.py", line 273, in from_llm_and_tools
+    return cls(  # type: ignore[call-arg]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain_core\_api\deprecation.py", line 224, in warn_if_direct_instance
+    return wrapped(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\pydantic\main.py", line 253, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for OpenAIFunctionsAgent
+llm
+  Input should be a valid dictionary or instance of BaseLanguageModel [type=model_type, input_value=RunnableBinding(bound=Cha...{}, config_factories=[]), input_type=RunnableBinding]
+    For further information visit https://errors.pydantic.dev/2.11/v/model_type
+2025-06-26 09:20:47,833 - LetterForge - INFO - -------------------Find Jobs button clicked--------------------
+2025-06-26 09:20:48,572 - LetterForge - INFO - [TOOL] Tool called with query: Management Trainee in India
+2025-06-26 09:20:48,572 - LetterForge - INFO - [TOOL] Parsed as title=Management Trainee, location=India
+2025-06-26 09:20:50,885 - LetterForge - INFO - [TOOL] Returning 2 job(s)
+2025-06-26 09:20:51,139 - LetterForge - ERROR - Agent execution failed.
+Traceback (most recent call last):
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\agents\agent.py", line 1354, in _iter_next_step
+    output = self._action_agent.plan(
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\agents\agent.py", line 801, in plan
+    return self.output_parser.parse(full_output)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\agents\mrkl\output_parser.py", line 79, in parse
+    raise OutputParserException(
+langchain_core.exceptions.OutputParserException: Could not parse LLM output: ``
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE 
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\modules\jobfetch\agent.py", line 75, in run_job_agent_from_description
+    result = agent.run(prompt)
+             ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain_core\_api\deprecation.py", line 191, in warning_emitting_wrapper
+    return wrapped(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\chains\base.py", line 603, in run
+    return self(args[0], callbacks=callbacks, tags=tags, metadata=metadata)[
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain_core\_api\deprecation.py", line 191, in warning_emitting_wrapper
+    return wrapped(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\chains\base.py", line 386, in __call__
+    return self.invoke(
+           ^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\chains\base.py", line 167, in invoke
+    raise e
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\chains\base.py", line 157, in invoke
+    self._call(inputs, run_manager=run_manager)
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\agents\agent.py", line 1620, in _call
+    next_step_output = self._take_next_step(
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\agents\agent.py", line 1326, in _take_next_step
+    [
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\agents\agent.py", line 1365, in _iter_next_step
+    raise ValueError(
+ValueError: An output parsing error occurred. In order to pass this error back to the agent and have it try again, pass `handle_parsing_errors=True` to the AgentExecutor. This is the error: Could not parse LLM output: ``
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE 
+2025-06-26 09:26:36,876 - LetterForge - INFO - -------------------Find Jobs button clicked--------------------
+2025-06-26 09:26:37,617 - LetterForge - INFO - [TOOL] Tool called with query: Management Trainee in India
+2025-06-26 09:26:37,617 - LetterForge - INFO - [TOOL] Parsed as title=Management Trainee, location=India
+2025-06-26 09:26:39,317 - LetterForge - INFO - [TOOL] Returning 2 job(s)
+2025-06-26 09:26:39,593 - LetterForge - ERROR - Agent execution failed.
+Traceback (most recent call last):
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\agents\agent.py", line 1354, in _iter_next_step
+    output = self._action_agent.plan(
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\agents\agent.py", line 801, in plan
+    return self.output_parser.parse(full_output)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\agents\mrkl\output_parser.py", line 79, in parse
+    raise OutputParserException(
+langchain_core.exceptions.OutputParserException: Could not parse LLM output: ``
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE 
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\modules\jobfetch\agent.py", line 75, in run_job_agent_from_description
+    result = agent.run(prompt)
+             ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain_core\_api\deprecation.py", line 191, in warning_emitting_wrapper
+    return wrapped(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\chains\base.py", line 603, in run
+    return self(args[0], callbacks=callbacks, tags=tags, metadata=metadata)[
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain_core\_api\deprecation.py", line 191, in warning_emitting_wrapper
+    return wrapped(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\chains\base.py", line 386, in __call__
+    return self.invoke(
+           ^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\chains\base.py", line 167, in invoke
+    raise e
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\chains\base.py", line 157, in invoke
+    self._call(inputs, run_manager=run_manager)
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\agents\agent.py", line 1620, in _call
+    next_step_output = self._take_next_step(
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\agents\agent.py", line 1326, in _take_next_step
+    [
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\agents\agent.py", line 1365, in _iter_next_step
+    raise ValueError(
+ValueError: An output parsing error occurred. In order to pass this error back to the agent and have it try again, pass `handle_parsing_errors=True` to the AgentExecutor. This is the error: Could not parse LLM output: ``
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE 
+2025-06-26 09:30:11,199 - LetterForge - INFO - -------------------Find Jobs button clicked--------------------
+2025-06-26 09:30:11,949 - LetterForge - INFO - [TOOL] Tool called with query: Management Trainee in India
+2025-06-26 09:30:11,949 - LetterForge - INFO - [TOOL] Parsed as title=Management Trainee, location=India
+2025-06-26 09:30:13,411 - LetterForge - INFO - [TOOL] Returning 2 job(s)
+2025-06-26 09:30:13,661 - LetterForge - ERROR - Agent execution failed.An output parsing error occurred. In order to pass this error back to the agent and have it try again, pass `handle_parsing_errors=True` to the AgentExecutor. This is the error: Could not parse LLM output: ``
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE 
+Traceback (most recent call last):
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\agents\agent.py", line 1354, in _iter_next_step
+    output = self._action_agent.plan(
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\agents\agent.py", line 801, in plan
+    return self.output_parser.parse(full_output)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\agents\mrkl\output_parser.py", line 79, in parse
+    raise OutputParserException(
+langchain_core.exceptions.OutputParserException: Could not parse LLM output: ``
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE 
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\modules\jobfetch\agent.py", line 75, in run_job_agent_from_description
+    result = agent.run(prompt)
+             ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain_core\_api\deprecation.py", line 191, in warning_emitting_wrapper
+    return wrapped(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\chains\base.py", line 603, in run
+    return self(args[0], callbacks=callbacks, tags=tags, metadata=metadata)[
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain_core\_api\deprecation.py", line 191, in warning_emitting_wrapper
+    return wrapped(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\chains\base.py", line 386, in __call__
+    return self.invoke(
+           ^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\chains\base.py", line 167, in invoke
+    raise e
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\chains\base.py", line 157, in invoke
+    self._call(inputs, run_manager=run_manager)
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\agents\agent.py", line 1620, in _call
+    next_step_output = self._take_next_step(
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\agents\agent.py", line 1326, in _take_next_step
+    [
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\agents\agent.py", line 1365, in _iter_next_step
+    raise ValueError(
+ValueError: An output parsing error occurred. In order to pass this error back to the agent and have it try again, pass `handle_parsing_errors=True` to the AgentExecutor. This is the error: Could not parse LLM output: ``
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE 
+2025-06-26 09:33:13,728 - LetterForge - INFO - -------------------Find Jobs button clicked--------------------
+2025-06-26 09:33:14,493 - LetterForge - INFO - [TOOL] Tool called with query: Management Trainee in India
+2025-06-26 09:33:14,493 - LetterForge - INFO - [TOOL] Parsed as title=Management Trainee, location=India
+2025-06-26 09:33:16,074 - LetterForge - INFO - [TOOL] Returning 2 job(s)
+2025-06-26 09:35:07,917 - LetterForge - INFO - -------------------Find Jobs button clicked--------------------
+2025-06-26 09:35:07,919 - LetterForge - ERROR - Agent execution failed.1 validation error for OpenAIFunctionsAgent
+llm
+  Input should be a valid dictionary or instance of BaseLanguageModel [type=model_type, input_value=RunnableBinding(bound=Cha...{}, config_factories=[]), input_type=RunnableBinding]
+    For further information visit https://errors.pydantic.dev/2.11/v/model_type
+Traceback (most recent call last):
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\modules\jobfetch\agent.py", line 56, in run_job_agent_from_description
+    agent = initialize_agent(
+            ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain_core\_api\deprecation.py", line 191, in warning_emitting_wrapper
+    return wrapped(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\agents\initialize.py", line 74, in initialize_agent
+    agent_obj = agent_cls.from_llm_and_tools(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\agents\openai_functions_agent\base.py", line 273, in from_llm_and_tools
+    return cls(  # type: ignore[call-arg]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain_core\_api\deprecation.py", line 224, in warn_if_direct_instance
+    return wrapped(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\pydantic\main.py", line 253, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for OpenAIFunctionsAgent
+llm
+  Input should be a valid dictionary or instance of BaseLanguageModel [type=model_type, input_value=RunnableBinding(bound=Cha...{}, config_factories=[]), input_type=RunnableBinding]
+    For further information visit https://errors.pydantic.dev/2.11/v/model_type
+2025-06-26 09:39:17,233 - LetterForge - INFO - -------------------Find Jobs button clicked--------------------
+2025-06-26 09:39:18,078 - LetterForge - INFO - [TOOL] Tool called with query: Management Trainee in India
+2025-06-26 09:39:18,078 - LetterForge - INFO - [TOOL] Parsed as title=Management Trainee, location=India
+2025-06-26 09:39:19,612 - LetterForge - INFO - [TOOL] Returning 2 job(s)
+2025-06-26 09:55:24,956 - LetterForge - INFO - -------------------Find Jobs button clicked--------------------
+2025-06-26 09:55:24,959 - LetterForge - ERROR - Agent execution failed.ZeroShotAgent does not support multi-input tool RapidJobSearch.
+Traceback (most recent call last):
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\modules\jobfetch\agent.py", line 62, in run_job_agent_from_description
+    agent = initialize_agent(
+            ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain_core\_api\deprecation.py", line 191, in warning_emitting_wrapper
+    return wrapped(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\agents\initialize.py", line 74, in initialize_agent
+    agent_obj = agent_cls.from_llm_and_tools(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\agents\mrkl\base.py", line 139, in from_llm_and_tools
+    cls._validate_tools(tools)
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\agents\mrkl\base.py", line 163, in _validate_tools
+    validate_tools_single_input(cls.__name__, tools)
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\agents\utils.py", line 18, in validate_tools_single_input
+    raise ValueError(
+ValueError: ZeroShotAgent does not support multi-input tool RapidJobSearch.
+2025-06-26 09:57:19,826 - LetterForge - INFO - -------------------Find Jobs button clicked--------------------
+2025-06-26 09:57:19,841 - LetterForge - ERROR - Agent execution failed.1 validation error for OpenAIFunctionsAgent
+llm
+  Input should be a valid dictionary or instance of BaseLanguageModel [type=model_type, input_value=RunnableBinding(bound=Cha...{}, config_factories=[]), input_type=RunnableBinding]
+    For further information visit https://errors.pydantic.dev/2.11/v/model_type
+Traceback (most recent call last):
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\modules\jobfetch\agent.py", line 62, in run_job_agent_from_description
+    agent = initialize_agent(
+            ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain_core\_api\deprecation.py", line 191, in warning_emitting_wrapper
+    return wrapped(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\agents\initialize.py", line 74, in initialize_agent
+    agent_obj = agent_cls.from_llm_and_tools(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\agents\openai_functions_agent\base.py", line 273, in from_llm_and_tools
+    return cls(  # type: ignore[call-arg]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain_core\_api\deprecation.py", line 224, in warn_if_direct_instance
+    return wrapped(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\pydantic\main.py", line 253, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for OpenAIFunctionsAgent
+llm
+  Input should be a valid dictionary or instance of BaseLanguageModel [type=model_type, input_value=RunnableBinding(bound=Cha...{}, config_factories=[]), input_type=RunnableBinding]
+    For further information visit https://errors.pydantic.dev/2.11/v/model_type
+2025-06-26 09:59:42,588 - LetterForge - INFO - -------------------Find Jobs button clicked--------------------
+2025-06-26 09:59:42,590 - LetterForge - ERROR - Agent execution failed.ZeroShotAgent does not support multi-input tool RapidJobSearch.
+Traceback (most recent call last):
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\modules\jobfetch\agent.py", line 62, in run_job_agent_from_description
+    agent = initialize_agent(
+            ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain_core\_api\deprecation.py", line 191, in warning_emitting_wrapper
+    return wrapped(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\agents\initialize.py", line 74, in initialize_agent
+    agent_obj = agent_cls.from_llm_and_tools(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\agents\mrkl\base.py", line 139, in from_llm_and_tools
+    cls._validate_tools(tools)
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\agents\mrkl\base.py", line 163, in _validate_tools
+    validate_tools_single_input(cls.__name__, tools)
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\agents\utils.py", line 18, in validate_tools_single_input
+    raise ValueError(
+ValueError: ZeroShotAgent does not support multi-input tool RapidJobSearch.
+2025-06-26 10:00:22,759 - LetterForge - INFO - -------------------Find Jobs button clicked--------------------
+2025-06-26 10:00:22,761 - LetterForge - ERROR - Agent execution failed.ZeroShotAgent does not support multi-input tool RapidJobSearch.
+Traceback (most recent call last):
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\modules\jobfetch\agent.py", line 62, in run_job_agent_from_description
+    agent = initialize_agent(
+            ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain_core\_api\deprecation.py", line 191, in warning_emitting_wrapper
+    return wrapped(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\agents\initialize.py", line 74, in initialize_agent
+    agent_obj = agent_cls.from_llm_and_tools(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\agents\mrkl\base.py", line 139, in from_llm_and_tools
+    cls._validate_tools(tools)
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\agents\mrkl\base.py", line 163, in _validate_tools
+    validate_tools_single_input(cls.__name__, tools)
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\agents\utils.py", line 18, in validate_tools_single_input
+    raise ValueError(
+ValueError: ZeroShotAgent does not support multi-input tool RapidJobSearch.
+2025-06-26 10:01:12,159 - LetterForge - INFO - -------------------Find Jobs button clicked--------------------
+2025-06-26 10:01:12,160 - LetterForge - ERROR - Agent execution failed.ZeroShotAgent does not support multi-input tool RapidJobSearch.
+Traceback (most recent call last):
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\modules\jobfetch\agent.py", line 62, in run_job_agent_from_description
+    agent = initialize_agent(
+            ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain_core\_api\deprecation.py", line 191, in warning_emitting_wrapper
+    return wrapped(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\agents\initialize.py", line 74, in initialize_agent
+    agent_obj = agent_cls.from_llm_and_tools(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\agents\mrkl\base.py", line 139, in from_llm_and_tools
+    cls._validate_tools(tools)
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\agents\mrkl\base.py", line 163, in _validate_tools
+    validate_tools_single_input(cls.__name__, tools)
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\agents\utils.py", line 18, in validate_tools_single_input
+    raise ValueError(
+ValueError: ZeroShotAgent does not support multi-input tool RapidJobSearch.
+2025-06-26 10:12:33,149 - LetterForge - INFO - -------------------Find Jobs button clicked--------------------
+2025-06-26 10:12:33,151 - LetterForge - ERROR - Agent execution failed.ZeroShotAgent does not support multi-input tool RapidJobSearch.
+Traceback (most recent call last):
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\modules\jobfetch\agent.py", line 62, in run_job_agent_from_description
+    agent = initialize_agent(
+            ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain_core\_api\deprecation.py", line 191, in warning_emitting_wrapper
+    return wrapped(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\agents\initialize.py", line 74, in initialize_agent
+    agent_obj = agent_cls.from_llm_and_tools(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\agents\mrkl\base.py", line 139, in from_llm_and_tools
+    cls._validate_tools(tools)
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\agents\mrkl\base.py", line 163, in _validate_tools
+    validate_tools_single_input(cls.__name__, tools)
+  File "C:\Users\Harikrishnan\Desktop\b\LetterForge\venv\Lib\site-packages\langchain\agents\utils.py", line 18, in validate_tools_single_input
+    raise ValueError(
+ValueError: ZeroShotAgent does not support multi-input tool RapidJobSearch.
+2025-06-26 10:17:24,131 - LetterForge - INFO - -------------------Find Jobs button clicked--------------------
+2025-06-26 10:17:25,004 - LetterForge - INFO - [TOOL] Tool called with query: Management Trainee in India
+2025-06-26 10:17:25,004 - LetterForge - INFO - [TOOL] Parsed as title=Management Trainee, location=India
+2025-06-26 10:17:26,537 - LetterForge - INFO - [TOOL] Returning 2 job(s)
+2025-06-26 10:19:56,292 - LetterForge - INFO - -------------------Find Jobs button clicked--------------------
+2025-06-26 10:19:57,128 - LetterForge - INFO - [TOOL] Tool called with query: Management Trainee in India
+2025-06-26 10:19:57,128 - LetterForge - INFO - [TOOL] Parsed as title=Management Trainee, location=India
+2025-06-26 10:19:58,705 - LetterForge - INFO - [TOOL] Returning 2 job(s)
+2025-06-26 10:21:41,274 - LetterForge - INFO - -------------------Generate button clicked--------------------
+2025-06-26 10:21:41,338 - LetterForge - INFO - Files loaded successfully!
+2025-06-26 10:21:46,534 - LetterForge - INFO - Entities extracted successfully!
+2025-06-26 10:21:48,652 - LetterForge - INFO - Cover letter generated successfully!
+2025-06-26 10:22:07,258 - LetterForge - INFO - -------------------Find Jobs button clicked--------------------
+2025-06-26 10:22:08,021 - LetterForge - INFO - [TOOL] Tool called with query: Engineering Manager- Mobile in Thiruvananthapuram
+2025-06-26 10:22:08,021 - LetterForge - INFO - [TOOL] Parsed as title=Engineering Manager- Mobile, location=Thiruvananthapuram
+2025-06-26 10:22:09,295 - LetterForge - INFO - [TOOL] Returning 2 job(s)
+2025-06-26 10:23:07,216 - LetterForge - INFO - -------------------Find Jobs button clicked--------------------
+2025-06-26 10:23:08,079 - LetterForge - INFO - [TOOL] Tool called with query: Engineering Manager- Mobile in Thiruvananthapuram
+2025-06-26 10:23:08,079 - LetterForge - INFO - [TOOL] Parsed as title=Engineering Manager- Mobile, location=Thiruvananthapuram
+2025-06-26 10:24:05,331 - LetterForge - INFO - -------------------Find Jobs button clicked--------------------
+2025-06-26 10:24:06,186 - LetterForge - INFO - [TOOL] Tool called with query: Engineering Manager- Mobile in Thiruvananthapuram
+2025-06-26 10:24:06,186 - LetterForge - INFO - [TOOL] Parsed as title=Engineering Manager- Mobile, location=Thiruvananthapuram
+2025-06-26 10:25:31,163 - LetterForge - INFO - -------------------Find Jobs button clicked--------------------
+2025-06-26 10:25:32,022 - LetterForge - INFO - [TOOL] Tool called with query: Engineering Manager- Mobile in Thiruvananthapuram
+2025-06-26 10:25:32,022 - LetterForge - INFO - [TOOL] Parsed as title=Engineering Manager- Mobile, location=Thiruvananthapuram
+2025-06-26 10:25:32,323 - LetterForge - ERROR - [TOOL] Exception occurred'str' object has no attribute 'get'
+2025-06-26 10:26:44,127 - LetterForge - INFO - -------------------Find Jobs button clicked--------------------
+2025-06-26 10:26:44,905 - LetterForge - INFO - [TOOL] Tool called with query: Engineering Manager- Mobile in Thiruvananthapuram
+2025-06-26 10:26:44,905 - LetterForge - INFO - [TOOL] Parsed as title=Engineering Manager- Mobile, location=Thiruvananthapuram
+2025-06-26 10:26:45,196 - LetterForge - ERROR - [TOOL] Exception occurred'str' object has no attribute 'get'
+2025-06-26 10:32:57,786 - LetterForge - INFO - -------------------Find Jobs button clicked--------------------
+2025-06-26 10:32:58,526 - LetterForge - INFO - [TOOL] Tool called with query: Engineering Manager- Mobile in Thiruvananthapuram
+2025-06-26 10:32:58,526 - LetterForge - INFO - [TOOL] Parsed as title=Engineering Manager- Mobile, location=Thiruvananthapuram
+2025-06-26 10:32:58,833 - LetterForge - INFO - [TOOL] Returning 2 job(s)
+2025-06-26 10:54:23,820 - LetterForge - INFO - -------------------Generate button clicked--------------------
+2025-06-26 10:54:23,905 - LetterForge - INFO - Files loaded successfully!
+2025-06-26 10:54:29,307 - LetterForge - INFO - Entities extracted successfully!
+2025-06-26 10:54:31,462 - LetterForge - INFO - Cover letter generated successfully!
+2025-06-26 10:55:50,921 - LetterForge - INFO - -------------------Find Jobs button clicked--------------------
+2025-06-26 10:55:51,793 - LetterForge - INFO - [TOOL] Tool called with query: Engineering Manager- Mobile in Thiruvananthapuram
+2025-06-26 10:55:51,794 - LetterForge - INFO - [TOOL] Parsed as title=Engineering Manager- Mobile, location=Thiruvananthapuram
+2025-06-26 10:55:52,172 - LetterForge - INFO - [TOOL] Returning 2 job(s)

@@ -2,8 +2,6 @@
 venv/
 clean_env/
 
-# Ignore logs
-logs/
 
 # Ignore source control
 .git
@@ -17,5 +15,4 @@ __pycache__/
 HARIKRISHNANS.pdf
 jd_sample.txt
 
-# Ignore env secrets
-.env
+

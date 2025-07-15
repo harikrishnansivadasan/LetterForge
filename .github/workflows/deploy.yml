@@ -1,9 +1,9 @@
-name: Deploy to EC2
+name: Versioned Deploy to EC2
 
 on:
   push:
     branches:
-      - master  # or your default branch
+      - master  
 
 jobs:
   deploy:
@@ -16,20 +16,21 @@ jobs:
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v3
 
-    - name: Login to Docker Hub
+    - name: Log in to Docker Hub
       run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
 
     - name: Build and push Docker image
       run: |
-        docker build -t ${{ secrets.DOCKER_USERNAME }}/letterforge:latest .
-        docker push ${{ secrets.DOCKER_USERNAME }}/letterforge:latest
+        docker buildx build --platform linux/amd64 \
+          -t ${{ secrets.DOCKER_USERNAME }}/letterforge:latest \
+          --push .
 
     - name: Add SSH key
       run: |
         echo "${{ secrets.EC2_SSH_KEY }}" | base64 -d > key.pem
         chmod 600 key.pem
 
-    - name: Deploy to EC2
+    - name: Deploy on EC2
       run: |
         ssh -o StrictHostKeyChecking=no -i key.pem ubuntu@${{ secrets.EC2_PUBLIC_IP }} << 'EOF'
           docker pull ${{ secrets.DOCKER_USERNAME }}/letterforge:latest

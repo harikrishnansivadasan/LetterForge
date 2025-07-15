@@ -1,0 +1,12 @@
+2025-07-15 21:38:05,460 - LetterForge - INFO - -------------------Generate button clicked--------------------
+2025-07-15 21:38:05,521 - LetterForge - INFO - Files loaded successfully!
+2025-07-15 21:38:09,127 - LetterForge - INFO - Entities extracted successfully!
+2025-07-15 21:38:10,494 - LetterForge - INFO - Cover letter generated successfully!
+2025-07-15 21:39:08,399 - LetterForge - INFO - -------------------Find Jobs button clicked--------------------
+2025-07-15 21:39:28,866 - LetterForge - INFO - -------------------Find Jobs button clicked--------------------
+2025-07-15 21:39:29,495 - LetterForge - INFO - Running agent to fetch jobs using prompt: 
+2025-07-15 21:39:29,943 - LetterForge - INFO - [TOOL] Tool called with query: Data Scientist in India
+2025-07-15 21:39:29,943 - LetterForge - INFO - [TOOL] Parsed as title=Data Scientist, location=India
+2025-07-15 21:39:31,193 - LetterForge - INFO - [TOOL] Jobs fetched: 10 jobs returned
+2025-07-15 21:39:31,193 - LetterForge - INFO - [TOOL] Returning 10 job(s)
+2025-07-15 21:40:09,358 - LetterForge - INFO - Bot reply generated

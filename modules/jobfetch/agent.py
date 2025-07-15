@@ -21,7 +21,11 @@ load_dotenv()
 @tool("RapidJobSearch", return_direct=True)
 def job_search_tool_func(query: str) -> str:
     """
-    Search for recent job listings based on a job title and location.
+    Fetch real-time job listings only when the user is explicitly looking
+    for job openings, using phrases like 'find jobs', 'search openings',
+    or 'show me positions'. Input must follow the format: '<Job Title> in <Location>'
+
+    warning : Do NOT use this tool to answer questions about career advice, skills, salaries, or general information.
 
     This tool fetches job openings using external job APIs based on user queries
     in the format: "<Job Title> in <Location>" (e.g., "ML Engineer in India").
@@ -89,35 +93,50 @@ def job_search_tool_func(query: str) -> str:
 # Define the LangChain Tool
 # job_tool = job_search_tool_func
 
+
 # Agent setup
-groq_llm = ChatGroq(model="llama-3.3-70b-versatile", temperature=0.2)
-llm_tools = groq_llm.bind_tools([job_search_tool_func])
+def common_llm():
+    groq_llm = ChatGroq(
+        model="meta-llama/llama-4-scout-17b-16e-instruct", temperature=0.2
+    )
+    llm_tools = groq_llm.bind_tools([job_search_tool_func])
+    agent = initialize_agent(
+        tools=[job_search_tool_func],
+        llm=llm_tools,
+        agent_type=AgentType.OPENAI_MULTI_FUNCTIONS,
+        verbose=True,
+        handle_parsing_errors=True,
+    )
+    return agent
 
 
-def run_job_agent_from_description(jd_text: str) -> str:
+def run_user_query_or_job_search(jd_text: str) -> str:
     try:
-        agent = initialize_agent(
-            tools=[job_search_tool_func],
-            llm=llm_tools,
-            agent_type=AgentType.OPENAI_MULTI_FUNCTIONS,
-            verbose=True,
-            handle_parsing_errors=True,
-        )
+        agent = common_llm()
 
         prompt = f"""
-You are a job assistant.
+    You are a smart job assistant.
 
-Instructions:
-1. Extract job title and location from the job description below.
-2. If no location, use "India". If no title, use "Software Engineer".
-3. Use the function called 'RapidJobSearch' with input in the format: "Job Title in Location".
-4. ONLY use the tool to answer. Do not respond otherwise.
+    Instructions:
+    1. Read the job description provided.
+    2. Extract a suitable job title and location based on the content.
+    3. If location is missing, default to "India". If title is missing, default to "Software Engineer".
+    4. Create a query in the format: "Job Title in Location" (e.g., "ML Engineer in Kochi").
+    5. Use the tool 'RapidJobSearch' with the query to fetch jobs.
+    6. ONLY respond using the tool. Do NOT answer directly.
 
-Job Description:
+    
+
+    Job Description:
             {jd_text}
         """
-        result = agent.run({prompt})
-        return result
+        try:
+            logger.info("Running agent to fetch jobs using prompt: ")
+            result = agent.run(prompt)
+            return result.content.strip() if hasattr(result, "content") else str(result)
+        except Exception as e:
+            logger.error("Error running agent: " + str(e))
+            return "Agent failed to run due to an error."
 
     except Exception as e:
         logger.exception("Agent execution failed." + str(e))

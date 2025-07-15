@@ -1,4 +1,6 @@
 import streamlit as st
+import json
+import urllib.parse
 from modules.fileloader import pdf_loader
 from modules.fileloader import text_loader
 from modules.ner.ner_capture import parse_resume, parse_jd
@@ -8,7 +10,9 @@ from modules.coverletter.gen_coverletter import generate_cover_letter
 from dotenv import load_dotenv
 from langchain_groq import ChatGroq
 from langchain_core.messages import AIMessage, HumanMessage
-from modules.jobfetch.agent import run_job_agent_from_description
+from modules.jobfetch.agent import run_user_query_or_job_search
+from modules.jobfetch.agent import common_llm
+from modules.display_jobs.display import display_similar_jobs
 
 # Load environment variables
 load_dotenv()
@@ -24,8 +28,11 @@ Generate = st.button("Generate Cover Letter")
 Find = st.button("🔍 Find Jobs ")
 
 # Initialize the LLM
-# https://groq.com/
-llm = ChatGroq(model="llama-3.3-70b-versatile", max_tokens=2000, temperature=0.2)
+# https://groq.com/"llama-3.3-70b-versatile"
+llm = ChatGroq(
+    model="meta-llama/llama-4-scout-17b-16e-instruct", max_tokens=2000, temperature=0.2
+)
+# llm = common_llm()
 
 # Initialize a status box to show processing status
 staus_box = st.empty()
@@ -118,7 +125,7 @@ if Find:
     logger.info("-------------------Find Jobs button clicked--------------------")
     if job_description:
         with st.spinner("Searching..."):
-            result = run_job_agent_from_description(job_description)
+            result = run_user_query_or_job_search(job_description)
             st.session_state.similar_jobs = result
             staus_box.success("Done.")
     else:
@@ -126,12 +133,14 @@ if Find:
 
 # Display similar jobs if available
 if "similar_jobs" in st.session_state:
-    st.markdown("### 🧠 Jobs Found by AI")
-    st.markdown(st.session_state.similar_jobs)
+    display_similar_jobs(st.session_state.similar_jobs)
 
 
 # Chat Interface
-if 1 == 1:  # st.session_state.cover_letter is not None:
+if (
+    st.session_state.resume_entities is not None
+    and st.session_state.jd_entities is not None
+):
     st.sidebar.title("Chat Assistant")
 
     if "chat_history" not in st.session_state:
@@ -181,7 +190,8 @@ if 1 == 1:  # st.session_state.cover_letter is not None:
                 user_input=user_input,
             )
             response = llm.invoke(formatted_prompt)
-            bot_reply = response.content.strip()
+            bot_reply = response.content.strip()  # Get the content of the response
+            logger.info(f"Bot reply generated")
 
         except Exception as e:
             logger.error(f"Error formatting prompt: {e}")
@@ -193,3 +203,20 @@ if 1 == 1:  # st.session_state.cover_letter is not None:
         )
         # Display the bot's reply in the chat interface
         st.rerun()
+
+
+# Dashboard
+if st.session_state.resume_entities and st.session_state.jd_entities:
+    cv = urllib.parse.quote(json.dumps(st.session_state.resume_entities))
+    jd = urllib.parse.quote(json.dumps(st.session_state.jd_entities))
+
+    st.markdown(
+        f"""
+        <a href="/dashboard_page?cv={cv}&jd={jd}" target="_blank">
+            <button style="padding: 0.5em 1em; background-color: #4CAF50; color: white; border: none; border-radius: 5px;">
+                🚀 Open Skill Analyzer Dashboard
+            </button>
+        </a>
+        """,
+        unsafe_allow_html=True,
+    )

@@ -7,3 +7,9 @@ spacy
 PyMuPDF
 langchain
 langchain-huggingface
+plotly
+fuzzywuzzy
+spacy
+wordcloud
+matplotlib
+python-Levenshtein

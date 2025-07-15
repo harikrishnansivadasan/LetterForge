@@ -1,0 +1,186 @@
+2025-07-02 00:29:29,033 - LetterForge - INFO - [TOOL] Tool called with query: Data Analyst in Kochi
+2025-07-02 00:29:29,033 - LetterForge - INFO - [TOOL] Parsed as title=Data Analyst, location=Kochi
+2025-07-02 00:29:30,011 - LetterForge - INFO - [TOOL] Jobs fetched: 1 jobs returned
+2025-07-02 00:29:30,012 - LetterForge - INFO - [TOOL] Returning 1 job(s)
+2025-07-02 00:31:25,574 - LetterForge - INFO - [TOOL] Tool called with query: Data Analyst in Kochi
+2025-07-02 00:31:25,574 - LetterForge - INFO - [TOOL] Parsed as title=Data Analyst, location=Kochi
+2025-07-02 00:31:26,592 - LetterForge - INFO - [TOOL] Jobs fetched: 1 jobs returned
+2025-07-02 00:31:26,592 - LetterForge - INFO - [TOOL] Returning 1 job(s)
+2025-07-02 00:37:59,615 - LetterForge - INFO - [TOOL] Tool called with query: Data Analyst in Kochi
+2025-07-02 00:37:59,616 - LetterForge - INFO - [TOOL] Parsed as title=Data Analyst, location=Kochi
+2025-07-02 00:38:00,586 - LetterForge - INFO - [TOOL] Jobs fetched: 1 jobs returned
+2025-07-02 00:38:00,586 - LetterForge - INFO - [TOOL] Returning 1 job(s)
+2025-07-02 00:39:21,435 - LetterForge - INFO - [TOOL] Tool called with query: Data scientist in Kochi
+2025-07-02 00:39:21,436 - LetterForge - INFO - [TOOL] Parsed as title=Data scientist, location=Kochi
+2025-07-02 00:39:22,565 - LetterForge - INFO - [TOOL] Jobs fetched: 3 jobs returned
+2025-07-02 00:39:22,565 - LetterForge - INFO - [TOOL] Returning 3 job(s)
+2025-07-02 00:39:24,962 - LetterForge - INFO - [TOOL] Tool called with query: Data scientist in Kochi
+2025-07-02 00:39:24,963 - LetterForge - INFO - [TOOL] Parsed as title=Data scientist, location=Kochi
+2025-07-02 00:39:25,887 - LetterForge - INFO - [TOOL] Jobs fetched: 3 jobs returned
+2025-07-02 00:39:25,887 - LetterForge - INFO - [TOOL] Returning 3 job(s)
+2025-07-02 00:43:30,996 - LetterForge - INFO - [TOOL] Tool called with query: Data scientist in Kochi
+2025-07-02 00:43:30,997 - LetterForge - INFO - [TOOL] Parsed as title=Data scientist, location=Kochi
+2025-07-02 00:43:32,023 - LetterForge - INFO - [TOOL] Jobs fetched: 3 jobs returned
+2025-07-02 00:43:32,023 - LetterForge - INFO - [TOOL] Returning 3 job(s)
+2025-07-02 15:47:08,135 - LetterForge - INFO - [TOOL] Tool called with query: Data Analyst in Kochi
+2025-07-02 15:47:08,137 - LetterForge - INFO - [TOOL] Parsed as title=Data Analyst, location=Kochi
+2025-07-02 15:47:09,089 - LetterForge - INFO - [TOOL] Jobs fetched: 1 jobs returned
+2025-07-02 15:47:09,089 - LetterForge - INFO - [TOOL] Returning 1 job(s)
+2025-07-02 15:47:09,093 - LetterForge - ERROR - Error formatting prompt: 'dict' object has no attribute 'content'
+2025-07-02 15:48:19,502 - LetterForge - INFO - [TOOL] Tool called with query: ml engineer in alappuzha
+2025-07-02 15:48:19,502 - LetterForge - INFO - [TOOL] Parsed as title=ml engineer, location=alappuzha
+2025-07-02 15:48:20,545 - LetterForge - INFO - [TOOL] Jobs fetched: 0 jobs returned
+2025-07-02 15:48:20,546 - LetterForge - ERROR - Error formatting prompt: 'dict' object has no attribute 'content'
+2025-07-02 15:50:25,908 - LetterForge - INFO - [TOOL] Tool called with query: Data Analyst in Kochi
+2025-07-02 15:50:25,908 - LetterForge - INFO - [TOOL] Parsed as title=Data Analyst, location=Kochi
+2025-07-02 15:50:26,837 - LetterForge - INFO - [TOOL] Jobs fetched: 1 jobs returned
+2025-07-02 15:50:26,837 - LetterForge - INFO - [TOOL] Returning 1 job(s)
+2025-07-02 15:50:26,838 - LetterForge - ERROR - Error formatting prompt: 'dict' object has no attribute 'content'
+2025-07-02 15:53:04,300 - LetterForge - INFO - [TOOL] Tool called with query: Data Analyst in Kochi
+2025-07-02 15:53:04,300 - LetterForge - INFO - [TOOL] Parsed as title=Data Analyst, location=Kochi
+2025-07-02 15:53:05,215 - LetterForge - INFO - [TOOL] Jobs fetched: 1 jobs returned
+2025-07-02 15:53:05,215 - LetterForge - INFO - [TOOL] Returning 1 job(s)
+2025-07-02 15:57:13,754 - LetterForge - ERROR - Error formatting prompt: 2 validation errors for AIMessage
+content.str
+  Input should be a valid string [type=string_type, input_value={'input': [SystemMessage(...BB3F006F62E1601BF48D15'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/string_type
+content.list[union[str,dict[any,any]]]
+  Input should be a valid list [type=list_type, input_value={'input': [SystemMessage(...BB3F006F62E1601BF48D15'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/list_type
+2025-07-02 15:58:40,608 - LetterForge - ERROR - Error formatting prompt: 2 validation errors for AIMessage
+content.str
+  Input should be a valid string [type=string_type, input_value={'input': [SystemMessage(...BB3F006F62E1601BF48D15'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/string_type
+content.list[union[str,dict[any,any]]]
+  Input should be a valid list [type=list_type, input_value={'input': [SystemMessage(...BB3F006F62E1601BF48D15'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/list_type
+2025-07-02 15:59:34,642 - LetterForge - INFO - Bot reply generated
+2025-07-02 15:59:59,458 - LetterForge - INFO - Bot reply generated
+2025-07-02 16:00:11,923 - LetterForge - INFO - Bot reply generated
+2025-07-02 16:00:30,864 - LetterForge - INFO - -------------------Find Jobs button clicked--------------------
+2025-07-02 16:01:06,846 - LetterForge - INFO - -------------------Find Jobs button clicked--------------------
+2025-07-02 16:07:50,061 - LetterForge - INFO - -------------------Find Jobs button clicked--------------------
+2025-07-02 16:23:56,136 - LetterForge - INFO - -------------------Find Jobs button clicked--------------------
+2025-07-02 16:23:56,698 - LetterForge - INFO - Running agent to fetch jobs using prompt: 
+2025-07-02 16:23:58,019 - LetterForge - INFO - [TOOL] Tool called with query: Management Trainee in India
+2025-07-02 16:23:58,019 - LetterForge - INFO - [TOOL] Parsed as title=Management Trainee, location=India
+2025-07-02 16:23:59,131 - LetterForge - INFO - [TOOL] Jobs fetched: 10 jobs returned
+2025-07-02 16:23:59,132 - LetterForge - INFO - [TOOL] Returning 10 job(s)
+2025-07-02 16:23:59,134 - LetterForge - ERROR - Error running agent: 'str' object has no attribute 'get'
+2025-07-02 16:25:45,642 - LetterForge - INFO - -------------------Find Jobs button clicked--------------------
+2025-07-02 16:25:46,190 - LetterForge - INFO - Running agent to fetch jobs using prompt: 
+2025-07-02 16:25:49,402 - LetterForge - INFO - [TOOL] Tool called with query: Management Trainee in India
+2025-07-02 16:25:49,402 - LetterForge - INFO - [TOOL] Parsed as title=Management Trainee, location=India
+2025-07-02 16:25:50,493 - LetterForge - INFO - [TOOL] Jobs fetched: 10 jobs returned
+2025-07-02 16:25:50,493 - LetterForge - INFO - [TOOL] Returning 10 job(s)
+2025-07-02 16:33:35,257 - LetterForge - INFO - -------------------Find Jobs button clicked--------------------
+2025-07-02 16:33:35,860 - LetterForge - INFO - Running agent to fetch jobs using prompt: 
+2025-07-02 16:33:37,085 - LetterForge - INFO - [TOOL] Tool called with query: Management Trainee in India
+2025-07-02 16:33:37,086 - LetterForge - INFO - [TOOL] Parsed as title=Management Trainee, location=India
+2025-07-02 16:33:38,176 - LetterForge - INFO - [TOOL] Jobs fetched: 10 jobs returned
+2025-07-02 16:33:38,176 - LetterForge - INFO - [TOOL] Returning 10 job(s)
+2025-07-02 16:37:49,637 - LetterForge - INFO - -------------------Find Jobs button clicked--------------------
+2025-07-02 16:37:50,190 - LetterForge - INFO - Running agent to fetch jobs using prompt: 
+2025-07-02 16:37:50,966 - LetterForge - ERROR - Error running agent: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01jvkyzyw7f4ktxb9psct8y9kr` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 100076, Requested 841. Please try again in 13m13.105s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2025-07-02 16:40:21,914 - LetterForge - INFO - -------------------Find Jobs button clicked--------------------
+2025-07-02 16:40:22,474 - LetterForge - INFO - Running agent to fetch jobs using prompt: 
+2025-07-02 16:40:23,706 - LetterForge - ERROR - Error running agent: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01jvkyzyw7f4ktxb9psct8y9kr` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99901, Requested 823. Please try again in 10m24.821s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2025-07-02 17:14:56,883 - LetterForge - INFO - -------------------Find Jobs button clicked--------------------
+2025-07-02 17:14:57,450 - LetterForge - INFO - Running agent to fetch jobs using prompt: 
+2025-07-02 17:14:58,731 - LetterForge - INFO - [TOOL] Tool called with query: Management Trainee in India
+2025-07-02 17:14:58,731 - LetterForge - INFO - [TOOL] Parsed as title=Management Trainee, location=India
+2025-07-02 17:14:59,955 - LetterForge - INFO - [TOOL] Jobs fetched: 10 jobs returned
+2025-07-02 17:14:59,955 - LetterForge - INFO - [TOOL] Returning 10 job(s)
+2025-07-02 17:17:24,521 - LetterForge - INFO - -------------------Find Jobs button clicked--------------------
+2025-07-02 17:17:25,090 - LetterForge - INFO - Running agent to fetch jobs using prompt: 
+2025-07-02 17:17:25,295 - LetterForge - ERROR - Error running agent: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01jvkyzyw7f4ktxb9psct8y9kr` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 100079, Requested 823. Please try again in 12m59.65s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2025-07-02 17:21:24,190 - LetterForge - INFO - Bot reply generated
+2025-07-02 17:21:32,695 - LetterForge - INFO - -------------------Find Jobs button clicked--------------------
+2025-07-02 17:21:33,252 - LetterForge - INFO - Running agent to fetch jobs using prompt: 
+2025-07-02 17:21:33,707 - LetterForge - INFO - [TOOL] Tool called with query: Management Trainee in India
+2025-07-02 17:21:33,708 - LetterForge - INFO - [TOOL] Parsed as title=Management Trainee, location=India
+2025-07-02 17:21:34,822 - LetterForge - INFO - [TOOL] Jobs fetched: 10 jobs returned
+2025-07-02 17:21:34,822 - LetterForge - INFO - [TOOL] Returning 10 job(s)
+2025-07-02 17:23:01,675 - LetterForge - INFO - Bot reply generated
+2025-07-02 17:23:59,331 - LetterForge - INFO - Bot reply generated
+2025-07-02 17:24:29,425 - LetterForge - INFO - -------------------Generate button clicked--------------------
+2025-07-02 17:24:29,513 - LetterForge - INFO - Files loaded successfully!
+2025-07-02 17:24:29,704 - LetterForge - ERROR - Error parsing files: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01jvkyzyw7f4ktxb9psct8y9kr` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99589, Requested 1278. Please try again in 12m28.373999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2025-07-02 17:24:29,705 - LetterForge - ERROR - Error generating cover letter: name 'resume_entities' is not defined
+2025-07-02 17:24:29,705 - LetterForge - ERROR - Error loading PDF: name 'cover_letter' is not defined
+2025-07-02 17:25:28,791 - LetterForge - INFO - -------------------Generate button clicked--------------------
+2025-07-02 17:25:28,806 - LetterForge - INFO - Files loaded successfully!
+2025-07-02 17:25:29,037 - LetterForge - ERROR - Error parsing files: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01jvkyzyw7f4ktxb9psct8y9kr` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99520, Requested 1278. Please try again in 11m29.045s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2025-07-02 17:25:29,037 - LetterForge - ERROR - Error generating cover letter: name 'resume_entities' is not defined
+2025-07-02 17:25:29,037 - LetterForge - ERROR - Error loading PDF: name 'cover_letter' is not defined
+2025-07-02 17:26:52,514 - LetterForge - INFO - -------------------Generate button clicked--------------------
+2025-07-02 17:26:52,528 - LetterForge - INFO - Files loaded successfully!
+2025-07-02 17:26:55,694 - LetterForge - INFO - Entities extracted successfully!
+2025-07-02 17:26:56,645 - LetterForge - INFO - Cover letter generated successfully!
+2025-07-02 17:27:14,913 - LetterForge - INFO - -------------------Find Jobs button clicked--------------------
+2025-07-02 17:27:15,477 - LetterForge - INFO - Running agent to fetch jobs using prompt: 
+2025-07-02 17:27:15,918 - LetterForge - INFO - [TOOL] Tool called with query: Management Trainee in India
+2025-07-02 17:27:15,918 - LetterForge - INFO - [TOOL] Parsed as title=Management Trainee, location=India
+2025-07-02 17:27:17,024 - LetterForge - INFO - [TOOL] Jobs fetched: 10 jobs returned
+2025-07-02 17:27:17,024 - LetterForge - INFO - [TOOL] Returning 10 job(s)
+2025-07-02 17:56:33,142 - LetterForge - INFO - -------------------Generate button clicked--------------------
+2025-07-02 17:56:33,174 - LetterForge - INFO - Files loaded successfully!
+2025-07-02 17:56:36,775 - LetterForge - INFO - Entities extracted successfully!
+2025-07-02 17:56:37,797 - LetterForge - INFO - Cover letter generated successfully!
+2025-07-02 17:56:55,454 - LetterForge - INFO - Bot reply generated
+2025-07-02 18:33:22,505 - LetterForge - INFO - -------------------Generate button clicked--------------------
+2025-07-02 18:33:22,565 - LetterForge - INFO - Files loaded successfully!
+2025-07-02 18:33:25,767 - LetterForge - INFO - Entities extracted successfully!
+2025-07-02 18:33:26,801 - LetterForge - INFO - Cover letter generated successfully!
+2025-07-02 18:38:51,228 - LetterForge - INFO - -------------------Generate button clicked--------------------
+2025-07-02 18:38:51,239 - LetterForge - INFO - Files loaded successfully!
+2025-07-02 18:38:54,237 - LetterForge - INFO - Entities extracted successfully!
+2025-07-02 18:38:55,265 - LetterForge - INFO - Cover letter generated successfully!
+2025-07-02 18:41:39,855 - LetterForge - INFO - -------------------Generate button clicked--------------------
+2025-07-02 18:41:39,870 - LetterForge - INFO - Files loaded successfully!
+2025-07-02 18:41:43,291 - LetterForge - INFO - Entities extracted successfully!
+2025-07-02 18:41:44,294 - LetterForge - INFO - Cover letter generated successfully!
+2025-07-02 19:13:15,227 - LetterForge - INFO - -------------------Generate button clicked--------------------
+2025-07-02 19:13:15,285 - LetterForge - INFO - Files loaded successfully!
+2025-07-02 19:13:18,580 - LetterForge - INFO - Entities extracted successfully!
+2025-07-02 19:13:19,525 - LetterForge - INFO - Cover letter generated successfully!
+2025-07-02 19:14:08,819 - LetterForge - INFO - -------------------Generate button clicked--------------------
+2025-07-02 19:14:08,828 - LetterForge - INFO - Files loaded successfully!
+2025-07-02 19:14:11,910 - LetterForge - INFO - Entities extracted successfully!
+2025-07-02 19:14:13,010 - LetterForge - INFO - Cover letter generated successfully!
+2025-07-02 19:17:50,460 - LetterForge - INFO - -------------------Generate button clicked--------------------
+2025-07-02 19:17:50,476 - LetterForge - INFO - Files loaded successfully!
+2025-07-02 19:17:54,126 - LetterForge - INFO - Entities extracted successfully!
+2025-07-02 19:17:55,270 - LetterForge - INFO - Cover letter generated successfully!
+2025-07-02 19:24:48,514 - LetterForge - INFO - -------------------Generate button clicked--------------------
+2025-07-02 19:24:48,528 - LetterForge - INFO - Files loaded successfully!
+2025-07-02 19:24:51,805 - LetterForge - INFO - Entities extracted successfully!
+2025-07-02 19:24:52,913 - LetterForge - INFO - Cover letter generated successfully!
+2025-07-02 19:47:48,221 - LetterForge - INFO - Loaded CV and JD skills from query params.([], [])
+2025-07-02 19:50:52,504 - LetterForge - ERROR - Failed to load skills from query params: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+2025-07-02 19:53:51,922 - LetterForge - INFO - -------------------Generate button clicked--------------------
+2025-07-02 19:53:51,980 - LetterForge - INFO - Files loaded successfully!
+2025-07-02 19:53:55,532 - LetterForge - INFO - Entities extracted successfully!
+2025-07-02 19:53:56,597 - LetterForge - INFO - Cover letter generated successfully!
+2025-07-02 20:01:50,858 - LetterForge - INFO - -------------------Find Jobs button clicked--------------------
+2025-07-02 20:01:51,422 - LetterForge - INFO - Running agent to fetch jobs using prompt: 
+2025-07-02 20:01:52,608 - LetterForge - INFO - [TOOL] Tool called with query: Data Analyst in India
+2025-07-02 20:01:52,608 - LetterForge - INFO - [TOOL] Parsed as title=Data Analyst, location=India
+2025-07-02 20:01:53,842 - LetterForge - INFO - [TOOL] Jobs fetched: 10 jobs returned
+2025-07-02 20:01:53,842 - LetterForge - INFO - [TOOL] Returning 10 job(s)
+2025-07-02 20:58:13,399 - LetterForge - INFO - -------------------Generate button clicked--------------------
+2025-07-02 20:58:13,487 - LetterForge - INFO - Files loaded successfully!
+2025-07-02 20:58:17,085 - LetterForge - INFO - Entities extracted successfully!
+2025-07-02 20:58:18,169 - LetterForge - INFO - Cover letter generated successfully!
+2025-07-02 20:58:31,067 - LetterForge - INFO - -------------------Find Jobs button clicked--------------------
+2025-07-02 20:58:31,706 - LetterForge - INFO - Running agent to fetch jobs using prompt: 
+2025-07-02 20:58:32,216 - LetterForge - INFO - [TOOL] Tool called with query: Data Analyst in India
+2025-07-02 20:58:32,217 - LetterForge - INFO - [TOOL] Parsed as title=Data Analyst, location=India
+2025-07-02 20:58:33,466 - LetterForge - INFO - [TOOL] Jobs fetched: 10 jobs returned
+2025-07-02 20:58:33,466 - LetterForge - INFO - [TOOL] Returning 10 job(s)
+2025-07-02 21:01:07,479 - LetterForge - INFO - -------------------Generate button clicked--------------------
+2025-07-02 21:01:07,524 - LetterForge - INFO - Files loaded successfully!
+2025-07-02 21:01:12,789 - LetterForge - INFO - Entities extracted successfully!
+2025-07-02 21:01:14,077 - LetterForge - INFO - Cover letter generated successfully!
+2025-07-02 21:01:57,292 - LetterForge - INFO - Bot reply generated
+2025-07-02 21:04:07,874 - LetterForge - INFO - Bot reply generated

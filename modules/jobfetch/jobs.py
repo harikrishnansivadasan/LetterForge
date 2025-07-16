@@ -8,7 +8,7 @@ from modules.logging.logger import logger
 load_dotenv()
 
 # RapidAPI key
-rapidapi_key = os.getenv("x-rapidapi-key")
+rapidapi_key = os.getenv("RAPIDAPI_KEY")
 
 # Dummy data for testing
 dummy = [
@@ -30,7 +30,7 @@ dummy = [
 def fetch_job(job_title: str, location: str) -> json:
     try:
         # RapidAPI key
-        rapidapi_key = os.getenv("x-rapidapi-key")
+        rapidapi_key = os.getenv("RAPIDAPI_KEY")
 
         """Fetch job details from RapidAPI"""
         conn = http.client.HTTPSConnection("linkedin-job-search-api.p.rapidapi.com")

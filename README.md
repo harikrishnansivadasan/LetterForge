@@ -38,10 +38,11 @@ Built with 🐍 Python, ⚡ Streamlit, and 🤖 LLMs, LetterForge streamlines yo
    pip install -r requirements.txt
 3. **Add your .env file**
    create .env file in root folder and add your api keys
+   ```bash
     GROQ_API_KEY=your_key
     RAPIDAPI_KEY=your_key
     ADZUNA_APP_ID=your_id
     ADZUNA_APP_KEY=your_key
-4. **Run the app**
+5. **Run the app**
    ```bash
    streamlit run app.py

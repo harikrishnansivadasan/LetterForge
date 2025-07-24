@@ -1,3 +1,17 @@
+"""
+===============================================================================
+Development History:
+-------------------------------------------------------------------------------
+Date        | Author           | Change Description
+------------|------------------|----------------------------------------------
+2025-06-24  | Harikrishnan S   | Initial implementation of fetch_jobs functions.
+                               | note : this is a backup api ( has low req limits)
+2025-07-24  | Harikrishnan S   | Added Dev history.
+
+
+===============================================================================
+"""
+
 import http.client
 from dotenv import load_dotenv
 import json
@@ -26,8 +40,29 @@ dummy = [
     },
 ]
 
+# Note : A backup api serviece in case current api reach limit
+
 
 def fetch_job(job_title: str, location: str) -> json:
+    """
+    Fetches job listings from the LinkedIn Job Search API via RapidAPI.
+
+    This function:
+    - Retrieves the API key from environment variables.
+    - Sends a GET request to the RapidAPI LinkedIn Job Search endpoint.
+    - Queries for jobs based on the provided job title and location (URL-encoded).
+    - Parses and returns the API response as a JSON object.
+
+    Args:
+        job_title (str): The job title to search for (e.g., "Data Scientist").
+        location (str): The location to search in (e.g., "India", "United Kingdom").
+
+    Returns:
+        json: A parsed JSON object containing job listings (limit: 10).
+              Returns a fallback dummy object if the API call fails.
+
+    """
+
     try:
         # RapidAPI key
         rapidapi_key = os.getenv("RAPIDAPI_KEY")

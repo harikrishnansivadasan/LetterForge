@@ -1,3 +1,16 @@
+"""
+===============================================================================
+Development History:
+-------------------------------------------------------------------------------
+Date        | Author           | Change Description
+------------|------------------|----------------------------------------------
+2025-06-10  | Harikrishnan S   | Initial implementation of fetch_jobs_adzuna functions.
+2025-07-24  | Harikrishnan S   | Added doc String for fetxh_jobs_adzuna fn
+                               | Added Dev history
+
+===============================================================================
+"""
+
 import requests
 from dotenv import load_dotenv
 import json
@@ -10,6 +23,18 @@ load_dotenv()
 
 # adzuna API credentials
 def fetch_jobs_adzuna(title: str, location: str = "India", country: str = "in"):
+    """
+    Fetches job listings from the Adzuna Job Search API based on a job title and location.
+
+    Args:
+        title (str): The job title or keywords to search for (e.g., "data scientist").
+        location (str, optional): The geographical location to search within. Defaults to "India".
+        country (str, optional): The 2-letter country code for Adzuna's API (e.g., "in" for India, "us" for USA). Defaults to "in".
+
+    Returns:
+        dict: A dictionary containing job listings under the "results" key.
+              Returns {"results": []} if the request fails or no jobs are found."""
+
     app_id = os.getenv("ADZUNA_APP_ID")
     app_key = os.getenv("ADZUNA_APP_KEY")
 

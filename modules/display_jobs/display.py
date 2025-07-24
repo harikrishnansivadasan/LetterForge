@@ -1,9 +1,42 @@
+"""
+===============================================================================
+Development History:
+-------------------------------------------------------------------------------
+Date        | Author           | Change Description
+------------|------------------|----------------------------------------------
+2025-06-24  | Harikrishnan S   | Initial implementation of display_similar_jobs functions.
+2025-07-24  | Harikrishnan S   | Added doc string for display_similar_jobs fn.
+            |                  | Added dev history
+
+===============================================================================
+"""
+
 import streamlit as st
 import pandas as pd
 
 
 def display_similar_jobs(jobs_raw: str):
-    
+    """
+    Parses and displays a list of similar jobs using Streamlit UI components.
+
+    This function:
+    - Takes a raw string containing job listings separated by double newlines.
+    - Each job is expected to follow the format: "Job Title at Company (Location) → URL".
+    - Extracts job title, company name, location, and application URL.
+    - Displays each job as a row in a formatted Streamlit layout with an "Apply" button.
+
+    If parsing fails for a job entry, default values "Unknown" are used for company and location.
+
+    Args:
+        jobs_raw (str): Raw string of job listings fetched from an external source/tool.
+                        Example:
+                        "ML Engineer at ABC Corp (Bangalore) → https://example.com/job1\n\n
+                         Data Scientist at XYZ Inc (Pune) → https://example.com/job2"
+
+    Returns:
+        None. Displays the formatted jobs directly in the Streamlit app.
+    """
+
     jobs_text = jobs_raw.strip().split("\n\n")
     job_data = []
 

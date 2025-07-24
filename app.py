@@ -1,3 +1,17 @@
+"""
+===============================================================================
+Development History:
+-------------------------------------------------------------------------------
+Date        | Author           | Change Description
+------------|------------------|----------------------------------------------
+2025-06-05  | Harikrishnan S   | Initial implementation main.py.
+2025-06-24  | Harikrishnan S   | Added comments for readability and interpretation.
+2025-07-24  | Harikrishnan S   | Added Dev history.
+
+
+===============================================================================
+"""
+
 import streamlit as st
 import json
 import urllib.parse

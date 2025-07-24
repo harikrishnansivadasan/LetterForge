@@ -1,3 +1,16 @@
+"""
+===============================================================================
+Development History:
+-------------------------------------------------------------------------------
+Date        | Author           | Change Description
+------------|------------------|----------------------------------------------
+2025-06-24  | Harikrishnan S   | Initial implementation generate_coverletter functions and prompt.
+2025-07-24  | Harikrishnan S   | Added Doc string for generate_coverletter fn.
+            |                  | Added dev history
+
+===============================================================================
+"""
+
 import json
 import re
 from dotenv import load_dotenv

@@ -1,3 +1,13 @@
+"""
+===============================================================================
+Development History:
+-------------------------------------------------------------------------------
+Date        | Author           | Change Description
+------------|------------------|----------------------------------------------
+2025-06-14  | Harikrishnan S   | Initial implementation of load_text function.
+===============================================================================
+"""
+
 import re
 import string
 import logging
@@ -38,4 +48,3 @@ def load_text(input_text):
     except Exception as e:
         logging.error(f"Error loading text: {e}")
         return ""
-    

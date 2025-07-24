@@ -1,3 +1,14 @@
+"""
+===============================================================================
+Development History:
+-------------------------------------------------------------------------------
+Date        | Author           | Change Description
+------------|------------------|----------------------------------------------
+2025-06-14  | Harikrishnan S   | Initial implementation of load_pdf function.
+2025-07-19  | Harikrishnan S   | Doc string for load_pdf fn added.
+===============================================================================
+"""
+
 import pymupdf
 import logging
 import docx2txt

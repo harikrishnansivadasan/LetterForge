@@ -1,8 +1,22 @@
+"""
+===============================================================================
+Development History:
+-------------------------------------------------------------------------------
+Date        | Author           | Change Description
+------------|------------------|----------------------------------------------
+2025-06-24  | Harikrishnan S   | Initial implementation with common_llm and
+            |                  | run_user_query_or_job_search functions.
+2025-07-24  | Harikrishnan S   | Added error handling and prompt refinements.
+            |                  | Added dev history
+
+===============================================================================
+"""
+
 import logging
 from langchain.agents import Tool, initialize_agent
 from langchain_groq import ChatGroq
 from langchain.agents.agent_types import AgentType
-from modules.jobfetch.jobs import fetch_job  # Import the fetch_job function
+from modules.jobfetch.jobs import fetch_job  # Import the fetch_job function (Rapid-APi)
 from modules.jobfetch.jobs_adzuna import fetch_jobs_adzuna  # Import the Adzuna function
 from modules.logging.logger import logger
 from langchain.tools import tool
@@ -10,11 +24,6 @@ from dotenv import load_dotenv
 from pydantic import BaseModel, Field
 
 load_dotenv()
-
-
-# class JobSearchInput(BaseModel):
-#     job_title: str = Field(..., description="Job title to search for")
-#     location: str = Field(..., description="Location to search in")
 
 
 # LangChain-compatible wrapper
@@ -96,6 +105,18 @@ def job_search_tool_func(query: str) -> str:
 
 # Agent setup
 def common_llm():
+    """
+    Initializes and returns a LangChain agent configured with a Groq LLaMA 4 model and the `job_search_tool_func`.
+
+    This function:
+    - Uses the Groq-hosted LLaMA 4 Scout 17B model with low temperature (0.2) for controlled outputs.
+    - Binds the job search tool (`job_search_tool_func`) to the LLM as a tool.
+    - Initializes an agent with multi-function tool capability (`OPENAI_MULTI_FUNCTIONS`).
+    - Enables verbose output and error handling.
+
+    Returns:
+        AgentExecutor: A LangChain agent ready to process job search-related prompts.
+    """
     groq_llm = ChatGroq(
         model="meta-llama/llama-4-scout-17b-16e-instruct", temperature=0.2
     )
@@ -111,6 +132,25 @@ def common_llm():
 
 
 def run_user_query_or_job_search(jd_text: str) -> str:
+    """
+    Runs a job search using an LLM agent based on a given job description.
+
+    The function:
+    - Initializes the LLM agent using `common_llm()`.
+    - Constructs a structured prompt to guide the agent:
+        - Extracts job title and location from the JD.
+        - Defaults to "Software Engineer" and "India" if missing.
+        - Forms a search query in the format: "Job Title in Location".
+        - Uses the `RapidJobSearch` tool to fetch jobs.
+    - Returns the tool's response or an error message if execution fails.
+
+    Args:
+        jd_text (str): The raw job description text provided by the user.
+
+    Returns:
+        str: The job search results from the agent or an error message.
+    """
+
     try:
         agent = common_llm()
 

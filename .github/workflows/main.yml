@@ -54,7 +54,7 @@ jobs:
           docker run -d \
             --env-file .env \
             -v ~/letterforge-deploy/.env:/app/.env \
-            -p 8501:8501 \
+            -p 8502:8501 \
             --name letterforge \
             ${{ secrets.DOCKER_USERNAME }}/letterforge:latest
             

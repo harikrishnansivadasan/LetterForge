@@ -21,7 +21,6 @@ Built with 🐍 Python, ⚡ Streamlit, and 🤖 LLMs, LetterForge streamlines yo
 - **Frontend**: Streamlit
 - **Backend**: Python
 - **AI/LLM**: OpenAI / Groq via LangChain
-- **NLP**: spaCy, NER models
 - **Job APIs**: Adzuna, RapidAPI
 - **Deployment**: Docker, AWS EC2, GitHub Actions CI/CD
 

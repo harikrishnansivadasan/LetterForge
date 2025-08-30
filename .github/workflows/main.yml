@@ -10,18 +10,22 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    # 1️⃣ Checkout code
     - name: Checkout code
       uses: actions/checkout@v3
 
+    # 2️⃣ Setup Docker Buildx
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v3
 
+    # 3️⃣ Docker Login
     - name: Docker Login
       uses: docker/login-action@v3
       with:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
 
+    # 4️⃣ Build and Push Docker Image
     - name: Build and Push Docker Image
       uses: docker/build-push-action@v5
       with:
@@ -30,32 +34,38 @@ jobs:
         tags: ${{ secrets.DOCKER_USERNAME }}/letterforge:latest
         platforms: linux/amd64
 
+    # 5️⃣ Add SSH Key
     - name: Add SSH Key
       run: |
         echo "${{ secrets.EC2_SSH_KEY_B64 }}" | base64 -d > key.pem
         chmod 600 key.pem
 
+    # 6️⃣ Deploy on EC2
     - name: Deploy on EC2
       run: |
         ssh -o StrictHostKeyChecking=no -i key.pem ubuntu@${{ secrets.EC2_PUBLIC_IP }} << 'EOF'
           mkdir -p ~/letterforge-deploy
           cd ~/letterforge-deploy
-          
+
+          # Pull latest Docker image
           docker pull ${{ secrets.DOCKER_USERNAME }}/letterforge:latest
 
-          docker stop letterforge || true
-          docker rm letterforge || true
+          # Stop/remove any container using port 8502
+          docker ps -q --filter "publish=8502" | xargs -r docker stop
+          docker ps -aq --filter "publish=8502" | xargs -r docker rm
 
+          # Write .env file with all secrets
           echo "GROQ_API_KEY=${{ secrets.GROQ_API_KEY }}" > .env
           echo "RAPIDAPI_KEY=${{ secrets.RAPIDAPI_KEY }}" >> .env
           echo "ADZUNA_APP_ID=${{ secrets.ADZUNA_APP_ID }}" >> .env
           echo "ADZUNA_APP_KEY=${{ secrets.ADZUNA_APP_KEY }}" >> .env
-          
+
+          # Run the container with Streamlit bound to 0.0.0.0
           docker run -d \
             --env-file .env \
             -v ~/letterforge-deploy/.env:/app/.env \
             -p 8502:8501 \
             --name letterforge \
-            ${{ secrets.DOCKER_USERNAME }}/letterforge:latest
-            
+            ${{ secrets.DOCKER_USERNAME }}/letterforge:latest \
+            streamlit run app.py --server.address=0.0.0.0 --server.port=8501
         EOF

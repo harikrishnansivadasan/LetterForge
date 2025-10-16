@@ -47,7 +47,11 @@ jobs:
           mkdir -p ~/letterforge-deploy
           cd ~/letterforge-deploy
 
-          # Pull latest Docker image
+        # Clean up old containers and unused Docker resources
+          docker rm -f letterforge || true
+          docker system prune -af || true
+
+        # Pull latest Docker image
           docker pull ${{ secrets.DOCKER_USERNAME }}/letterforge:latest
 
           # Stop/remove any container using port 8502
